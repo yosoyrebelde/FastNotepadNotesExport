@@ -249,9 +249,14 @@ def get_file_from_user():
 if __name__ == "__main__":
 
     try:
+
+        print("Choose a Notepad backup file\n")
+
         file = get_file_from_user()
         if file != "":
             parse_file(file)
+
+        print(f"Notes successfully saved to \"{created_path}\"")
 
     except FastNotepadParserError as e:
         cleanup()

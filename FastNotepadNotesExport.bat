@@ -1,0 +1,2 @@
+python FastNotepadNotesExport.py
+pause
