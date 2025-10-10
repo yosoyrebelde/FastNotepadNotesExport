@@ -182,8 +182,8 @@ def parse_csv(csv_string):
 
         # Parse csv row
 
-        if len(csv_row) != CSV_ROW_LENGTH:
-            raise FastNotepadParserError("Error: Wrong 'index' data.")
+        if len(csv_row) < CSV_ROW_LENGTH:
+            raise FastNotepadParserError(f"Error: Wrong 'index' data. Expected {CSV_ROW_LENGTH} columns, got {len(csv_row)}.")
 
         file_index = f"_{csv_row[CSV_COL_FILE_INDEX]}" # with '_' prefix
         file_folder = csv_row[CSV_COL_FOLDER_NAME]
